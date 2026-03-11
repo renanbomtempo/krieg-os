@@ -1,2 +1,7 @@
-# arch-hyprland
-My dotfiles configurations and knowledge base for working with arch linux + hyprland
+# KRIEG-OS
+
+My personal Arch setup I am configuring from scratch to learn more about Linux-based Operating Systems.
+
+Distro: **Arch**
+Firmware interface: **UEFI**
+Root filesystem: **BTRFS**
