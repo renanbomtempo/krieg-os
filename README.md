@@ -2,7 +2,7 @@
 
 My personal Arch setup I am configuring from scratch to learn more about Linux-based Operating Systems.
 
-- Distro: **Arch**
+- OS: **Arch Linux**
 - Firmware interface: **UEFI**
 - Root filesystem: **BTRFS**
 - Display Server Protocol: **Wayland**
