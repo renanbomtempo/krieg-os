@@ -1,0 +1,69 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 2,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "wireplumber"],
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // LEFT ////////////////////////////////////////////////////////////////////
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "show-special": true,
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "rewrite": {
+            "(.*)": "$1"
+        }
+    },
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // CENTER //////////////////////////////////////////////////////////////////
+
+    // Date & Time (see https://en.cppreference.com/w/cpp/chrono/duration/formatter)
+    "clock": {
+        "interval": 1,
+        "format": "  {:%T    %a %d %b, %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // RIGHT ///////////////////////////////////////////////////////////////////
+
+    // Network: Shows Ethernet Download/Upload Speeds
+    "network": {
+        "interval": 1,
+        "format-ethernet": "󰈀  {bandwidthDownBytes}   {bandwidthUpBytes}",
+        "format-disconnected": "  Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+
+    // CPU Usage
+    "cpu": {
+        "interval": 1,
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+
+    // Memory Usage
+    "memory": {
+        "interval": 1,
+        "format": "  {percentage}%",
+        "tooltip-format": "Used: {used}GiB / Total: {total}GiB"
+    },
+
+
+    // Sound (WirePlumber for PipeWire)
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "  Muted",
+        "on-click": "helvum", // Or "pavucontrol" if you prefer
+        "format-icons": ["", "", ""]
+    }
+}

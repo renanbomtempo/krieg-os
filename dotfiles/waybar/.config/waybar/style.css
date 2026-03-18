@@ -1,0 +1,68 @@
+* {
+    /* Prioritize Adwaita for text, Nerd Font for icons */
+    font-family: "Adwaita Mono Nerd Font", "Noto Color Emoji";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(29, 29, 29, 0.1);
+    color: #ffffff;
+}
+
+/* Individual Modules */
+#network, #cpu, #memory, #wireplumber, #clock, #workspaces {
+    padding: 0 10px;
+    margin: 5px 2px;
+    border-radius: 6px; /* Adwaita-style slight rounding */
+    background-color: rgba(53, 53, 53, 0.3);
+    color: #ffffff;
+    border-radius: 100;
+}
+
+/* State-specific styling */
+#network.disconnected {
+    background-color: #f5c211; /* Warning Yellow */
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #e01b24; /* Error Red */
+    color: #ffffff;
+}
+
+/* Clock specific - make it stand out slightly */
+#clock {
+    font-weight: bold;
+}
+
+/* Workspaces (Hyprland) */
+#workspaces button {
+    padding: 0 2px;
+    margin: 4px 2px;
+    /* background-color: rgba(53, 53, 53, 0.72); */
+    color: #ffffff;
+    border-radius: 5px;
+    min-width: 16px;
+}
+
+/* Specific styling for the Special Workspace button */
+#workspaces button.special {
+    color: white; /* Gold star color */
+}
+
+#workspaces button.active {
+    background-color: #3584e4; /* Adwaita Blue */
+    color: white;
+}
+
+#workspaces button:hover {
+    background-color: #4a4a4a;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.special.active {
+    background-color: #3584e4; /* Adwaita Blue when special is focused */
+    color: white; /* Keep the gold star color when active */
+}
