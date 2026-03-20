@@ -13,7 +13,7 @@ My personal Arch setup I am configuring from scratch to learn more about Linux-b
 - Display Server Protocol: **Wayland**
 - Window Compositor: **Hyprland**
 
-Some of the applications I've been using:
+System applications:
 - File Manager: `nautilus`
 - App Launcher: `vicinae`
 - Terminal: `kitty`
@@ -22,6 +22,12 @@ Some of the applications I've been using:
 - Keyring: `gnome-keyring`
 - Image viewer: `loupe`
 - Video player: `showtime`
+- Terminal text editor: `micro` (more modern version of `nano` with better keybindings)
+
+Applications for personal use:
+- **[Obsidian](https://obsidian.md)**: For knowledge and task management.
+- **[Zotero](https://zotero.org)**: For reference management.
+- **[Immich](https://immich.app)**: Self hosted photo and video management for media organization and backup.
 
 
 # Dotfiles
